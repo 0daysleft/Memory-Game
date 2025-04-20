@@ -64,9 +64,10 @@ function shuffle(array){
 }
 
 let shuffledArray = shuffle(cardArray);
-const cardsChosen =[]
+let cardsChosen =[]
 
 function createBoard() {
+     
      for(let i =0; i < shuffledArray.length; i++){
           const card = document.createElement('img');
           card.setAttribute('src',  './images/blank.png')
@@ -79,14 +80,23 @@ function createBoard() {
 createBoard();
 
 function checkMatch(){
-     
+     if(cardsChosen[0] === cardsChosen [1]){
+          console.log('You Won!!!!!')
+     }
+     else{
+          console.log('Not Yet Won')
+     }
 }
 
 function flipCard(){
      const cardId = this.getAttribute('data-id')
      cardsChosen.push(shuffledArray[cardId].name)
      this.setAttribute('src', cardArray[cardId].img)
-          if(cardsChosen.length === 2){
+     console.log(cardsChosen)
+          if(cardsChosen.length == 2){
+               gridDisplay.innerHTML =""
+               createBoard()
+               cardsChosen = []
                setTimeout(
                     checkMatch, 500
                )
