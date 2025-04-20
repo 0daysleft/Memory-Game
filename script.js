@@ -80,10 +80,10 @@ function createBoard() {
 createBoard();
 
 function checkMatch(){
-     console.log("card 0: ", cardsChosen[0] , " card 1: ", cardsChosen[1])
+     //console.log("card 0: ", cardsChosen[0] , " card 1: ", cardsChosen[1])
      if(cardsChosen[0] === cardsChosen [1]){
           console.log('You Won!!!!!')
-          console.log("card 0: ", cardsChosen[0] , " card 1: ", cardsChosen[1])
+          //console.log("card 0: ", cardsChosen[0] , " card 1: ", cardsChosen[1])
      }
      else{
           console.log('Not Yet Won')
