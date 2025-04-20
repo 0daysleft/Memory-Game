@@ -89,9 +89,9 @@ function checkMatch(){
           console.log('Not Yet Won')
      }
 
-     cardsChosen = []
-     gridDisplay.innerHTML =""
-     createBoard()
+     // cardsChosen = []
+     // gridDisplay.innerHTML =""
+     // createBoard()
 }
 
 
