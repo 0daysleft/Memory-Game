@@ -69,7 +69,7 @@ function createBoard() {
      for(let i =0; i < cardArray.length; i++){
           const card = document.createElement('img');
           card.setAttribute('src', shuffledArray[i].img)
-          console.log(card);
+          gridDisplay.append(card)
      }
 }
 
