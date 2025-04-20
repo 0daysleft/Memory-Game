@@ -78,10 +78,19 @@ function createBoard() {
 
 createBoard();
 
+function checkMatch(){
+     
+}
+
 function flipCard(){
      const cardId = this.getAttribute('data-id')
      cardsChosen.push(shuffledArray[cardId].name)
      this.setAttribute('src', cardArray[cardId].img)
+          if(cardsChosen.length === 2){
+               setTimeout(
+                    checkMatch, 500
+               )
+          }
 }
 
 
