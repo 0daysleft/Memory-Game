@@ -79,18 +79,11 @@ function createBoard() {
 
 createBoard();
 
-function checkMatch(){
-     if(cardsChosen[0] === cardsChosen [1]){
-          console.log('You Won!!!!!')
-     }
-     else{
-          console.log('Not Yet Won')
-     }
-}
 
 function flipCard(){
      const cardId = this.getAttribute('data-id')
      cardsChosen.push(shuffledArray[cardId].name)
+     //console.log("card 0: ", cardsChosen[0] , " card 1: ", cardsChosen[1])
      this.setAttribute('src', cardArray[cardId].img)
      console.log(cardsChosen)
           if(cardsChosen.length == 2){
@@ -104,6 +97,16 @@ function flipCard(){
 }
 
 
+function checkMatch(){
+     console.log("card 0: ", cardsChosen[0] , " card 1: ", cardsChosen[1])
+     if(cardsChosen[0] === cardsChosen [1]){
+          console.log('You Won!!!!!')
+          console.log("card 0: ", cardsChosen[0] , " card 1: ", cardsChosen[1])
+     }
+     else{
+          console.log('Not Yet Won')
+     }
+}
 
 
 
