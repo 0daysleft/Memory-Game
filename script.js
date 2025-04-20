@@ -69,7 +69,7 @@ const cardsChosen =[]
 function createBoard() {
      for(let i =0; i < shuffledArray.length; i++){
           const card = document.createElement('img');
-          card.setAttribute('src', shuffledArray[i].img)
+          card.setAttribute('src',  './images/blank.png')
           card.setAttribute('data-id', i)
           card.addEventListener('click', flipCard)
           gridDisplay.append(card)
@@ -81,7 +81,7 @@ createBoard();
 function flipCard(){
      const cardId = this.getAttribute('data-id')
      cardsChosen.push(shuffledArray[cardId].name)
-     
+     this.setAttribute('src', cardArray[cardId].img)
 }
 
 
