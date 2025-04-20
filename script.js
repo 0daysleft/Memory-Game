@@ -66,7 +66,7 @@ function shuffle(array){
 let shuffledArray = shuffle(cardArray);
 
 function createBoard() {
-     for(let i =0; i < cardArray.length; i++){
+     for(let i =0; i < 10; i++){
           const card = document.createElement('img');
           card.setAttribute('src', shuffledArray[i].img)
           gridDisplay.append(card)
