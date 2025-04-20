@@ -1,4 +1,6 @@
 
+const gridDisplay = document.querySelector('#grid');
+
 const cardArray =[
      {
           name: "fries",
@@ -61,4 +63,27 @@ function shuffle(array){
      return array;
 }
 
-console.log(shuffle(cardArray));
+let shuffledArray = shuffle(cardArray);
+
+function createBoard() {
+     for(let i =0; i < cardArray.length; i++){
+          const card = document.createElement('img');
+          card.setAttribute('src', shuffledArray[i].img)
+          console.log(card);
+     }
+}
+
+createBoard();
+
+
+
+
+
+
+
+
+
+
+
+
+
