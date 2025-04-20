@@ -1,5 +1,6 @@
 
 const gridDisplay = document.querySelector('#grid');
+let cardsChosen =[]
 
 const cardArray =[
      {
@@ -64,7 +65,6 @@ function shuffle(array){
 }
 
 let shuffledArray = shuffle(cardArray);
-let cardsChosen =[]
 
 function createBoard() {
      
@@ -89,10 +89,10 @@ function flipCard(){
           if(cardsChosen.length == 2){
                gridDisplay.innerHTML =""
                createBoard()
-               cardsChosen = []
                setTimeout(
                     checkMatch, 500
                )
+               cardsChosen = []
           }
 }
 
@@ -107,10 +107,6 @@ function checkMatch(){
           console.log('Not Yet Won')
      }
 }
-
-
-
-
 
 
 
