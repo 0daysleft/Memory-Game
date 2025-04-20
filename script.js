@@ -92,8 +92,8 @@ function flipCard(){
                setTimeout(
                     checkMatch, 500
                )
-               cardsChosen = []
           }
+          cardsChosen = []
 }
 
 
