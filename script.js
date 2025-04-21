@@ -86,14 +86,15 @@ function checkMatch(){
      const cards = document.querySelectorAll("#grid img");
      //console.log(cards.getAttribute('data-id'))
      console.log(cardsChosenIds)
-     if(cardsChosenIds[0] === cardsChosenIds[0])
-     { 
+     if(cardsChosenIds[0] === cardsChosenIds[1])
+     {
           cards[cardsChosenIds[0]].setAttribute('src', './images/blank.png')
           cardsChosen = []
           cardsChosenIds = []
-          return
+          
      }
      else{
+     
           if(cardsChosen[0] === cardsChosen [1]){
                cardsWon.push(cardsChosen);
                document.getElementById('result').innerHTML = cardsWon.length;
@@ -120,9 +121,10 @@ function checkMatch(){
                console.log(cardsChosen[0])
                console.log('Not Yet Won')
           }
+     }
           cardsChosen = []
           cardsChosenIds = []
-     }
+     
 }
 
 
