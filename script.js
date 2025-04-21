@@ -1,4 +1,13 @@
 
+//Show Game Rules
+
+// Open modal
+document.getElementById('openRulesBtn').onclick = function () {
+  document.getElementById('rulesModal').style.display = 'block';
+};
+
+
+
 const gridDisplay = document.querySelector('#grid');
 let cardsChosen =[]
 let cardsChosenIds = []
