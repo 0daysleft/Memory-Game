@@ -93,6 +93,10 @@ function checkMatch(){
           cards[cardsChosenIds[0]].removeEventListener('click', flipCard)
           cards[cardsChosenIds[1]].removeEventListener('click', flipCard)
           console.log('You Won!!!!!')
+
+          if(userScore == 6){
+               alert("Done")
+          }
          
      }
      else{
