@@ -3,6 +3,7 @@ const gridDisplay = document.querySelector('#grid');
 let cardsChosen =[]
 let cardsChosenIds = []
 let userScore = 0;
+let cardsWon = [];
 
 const cardArray =[
      {
@@ -96,9 +97,11 @@ function checkMatch(){
           cards[cardsChosenIds[0]].removeEventListener('click', flipCard)
           cards[cardsChosenIds[1]].removeEventListener('click', flipCard)
           console.log('You Won!!!!!')
-
+          cardsWon.push(cardsChosen);
           if(userScore == 6){
-               gridDisplay.textContent ='Congratulations 🥳🥳. You Just Won!!'
+               gridDisplay.innerHTML = 
+                              `Congratulations 🥳🥳. You Just Won!! </br>
+                              <button onclick='location.reload()'>Restart The Game</button>`
           }
          
      }
