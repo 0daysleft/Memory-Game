@@ -98,10 +98,9 @@ function checkMatch(){
           console.log(cards[cardsChosenIds[1]].setAttribute('src', './images/blank.png'))
           console.log(cardsChosen[0])
           console.log('Not Yet Won')
-          cardsChosen = []
-          cardsChosenIds = []
      }
-
+     cardsChosen = []
+     cardsChosenIds = []
 }
 
 
