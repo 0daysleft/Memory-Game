@@ -2,7 +2,8 @@
 
 document.getElementById('startGame').addEventListener('click', 
      () => {
-          
+          document.querySelector('.game-box').style.display = 'flex';
+          document.getElementById('startGame').style.display = 'none'
      }
 )
 
