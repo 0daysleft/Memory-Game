@@ -1,6 +1,10 @@
 //Get The Start Button
 
-document.getElementById('startGame');
+document.getElementById('startGame').addEventListener('click', 
+     () => {
+          
+     }
+)
 
 //Show Game Rules
 
