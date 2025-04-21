@@ -8,7 +8,7 @@ body{
 }
 
 .change-green{
-     animation: green-bg .5s ease-in-out;
+     animation: green-bg .5s ease-in-out forwards;
 }
 
 @keyframes green-bg{
@@ -22,7 +22,7 @@ body{
 }
 
 .change-red{
-     animation: red-bg .5s ease-in-out;
+     animation: red-bg .5s ease-in-out forwards;
 }
 
 @keyframes red-bg{

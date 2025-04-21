@@ -104,6 +104,7 @@ function checkMatch(){
                cards[cardsChosenIds[1]].setAttribute('src', './images/white.png')
                cards[cardsChosenIds[0]].removeEventListener('click', flipCard)
                cards[cardsChosenIds[1]].removeEventListener('click', flipCard)
+               document.body.classList.remove('change-red')
                document.body.classList.add('change-green')
                
                if(cardsWon.length == cardArray.length/2){
@@ -119,6 +120,7 @@ function checkMatch(){
                cards[cardsChosenIds[0]].setAttribute('src', './images/blank.png')
                cards[cardsChosenIds[1]].setAttribute('src', './images/blank.png')
                console.log(cardsChosen[0])
+               document.body.classList.remove('change-green')
                document.body.classList.add('change-red')
           }
      }
