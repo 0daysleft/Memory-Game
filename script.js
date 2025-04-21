@@ -11,6 +11,13 @@ document.querySelector('.close-btn').onclick = function () {
   document.getElementById('rulesModal').style.display = 'none';
 };
 
+// Close when clicking outside the modal
+window.onclick = function (e) {
+  const modal = document.getElementById('rulesModal');
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+};
 
 
 
