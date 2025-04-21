@@ -67,6 +67,7 @@ function shuffle(array){
 let shuffledArray = shuffle(cardArray);
 
 function createBoard() {
+
      
      for(let i =0; i < shuffledArray.length; i++){
           const card = document.createElement('img');
@@ -80,12 +81,14 @@ function createBoard() {
 createBoard();
 
 function checkMatch(){
+     const cards = document.querySelector("#grid img");
 
      if(cardsChosen[0] === cardsChosen [1]){
           console.log('You Won!!!!!')
          
      }
      else{
+
           
           console.log(cardsChosen[0])
           console.log('Not Yet Won')
