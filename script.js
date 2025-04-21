@@ -69,7 +69,6 @@ let shuffledArray = shuffle(cardArray);
 
 function createBoard() {
 
-     
      for(let i =0; i < shuffledArray.length; i++){
           const card = document.createElement('img');
           card.setAttribute('src',  './images/blank.png')
@@ -83,14 +82,16 @@ createBoard();
 
 function checkMatch(){
      const cards = document.querySelectorAll("#grid img");
-     console.log(cards)
+     //console.log(cards.getAttribute('data-id'))
+     console.log(cardsChosenIds)
      if(cardsChosen[0] === cardsChosen [1]){
           console.log('You Won!!!!!')
          
      }
      else{
 
-          
+          console.log(cards[cardsChosenIds[0]].setAttribute('src', './images/blank.png'))
+          console.log(cards[cardsChosenIds[1]].setAttribute('src', './images/blank.png'))
           console.log(cardsChosen[0])
           console.log('Not Yet Won')
           cardsChosen = []
