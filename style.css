@@ -7,6 +7,34 @@ body{
      flex-direction: column;
 }
 
+.change-green{
+     animation: green-bg .5s ease-in-out;
+}
+
+@keyframes green-bg{
+     from{
+          background-color: red;
+     }
+
+     to{
+          background-color: green;
+     }
+}
+
+.change-red{
+     animation: red-bg .5s ease-in-out;
+}
+
+@keyframes red-bg{
+     from{
+          background-color: green;
+     }
+
+     to{
+          background-color: red;
+     }
+}
+
 #grid{
      width: 400px;
      height: 300px;
