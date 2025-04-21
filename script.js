@@ -134,7 +134,7 @@ function checkMatch(){
                     gridDisplay.classList.add('restart-game')
                     gridDisplay.innerHTML = 
                                    `Congratulations 🥳🥳. You Just Won!! </br>
-                                   <button onclick='location.reload()'>Restart The Game</button>`
+                                   <button id='restartGame' onclick='location.reload()'>Restart The Game</button>`
                }
           
           }

@@ -7,12 +7,18 @@ body, .game-box{
      flex-direction: column;
 }
 
+.btn{
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1rem;
+}
+
 .game-box{
      display: none;
 }
 
 /* Button */
-#openRulesBtn {
+#openRulesBtn, #startGame {
   padding: 10px 20px;
   background-color: #2e86de;
   color: #fff;
