@@ -1,3 +1,6 @@
+//Get The Start Button
+
+document.getElementById('startGame');
 
 //Show Game Rules
 
