@@ -86,34 +86,43 @@ function checkMatch(){
      const cards = document.querySelectorAll("#grid img");
      //console.log(cards.getAttribute('data-id'))
      console.log(cardsChosenIds)
-     if(cardsChosen[0] === cardsChosen [1]){
-          cardsWon.push(cardsChosen);
-          document.getElementById('result').innerHTML = cardsWon.length;
-          cards[cardsChosenIds[0]].style.cursor = 'not-allowed'
-          cards[cardsChosenIds[1]].style.cursor = 'not-allowed'
-          cards[cardsChosenIds[0]].setAttribute('src', './images/white.png')
-          cards[cardsChosenIds[1]].setAttribute('src', './images/white.png')
-          cards[cardsChosenIds[0]].removeEventListener('click', flipCard)
-          cards[cardsChosenIds[1]].removeEventListener('click', flipCard)
-          console.log('You Won!!!!!')
-          
-          if(cardsWon.length == cardArray.length/2){
-               gridDisplay.classList.add('restart-game')
-               gridDisplay.innerHTML = 
-                              `Congratulations 🥳🥳. You Just Won!! </br>
-                              <button onclick='location.reload()'>Restart The Game</button>`
-          }
-         
+     if(cardsChosenIds[0] === cardsChosenIds[0])
+     { 
+          cards[cardsChosenIds[0]].setAttribute('src', './images/blank.png')
+          cardsChosen = []
+          cardsChosenIds = []
+          return
      }
      else{
+          if(cardsChosen[0] === cardsChosen [1]){
+               cardsWon.push(cardsChosen);
+               document.getElementById('result').innerHTML = cardsWon.length;
+               cards[cardsChosenIds[0]].style.cursor = 'not-allowed'
+               cards[cardsChosenIds[1]].style.cursor = 'not-allowed'
+               cards[cardsChosenIds[0]].setAttribute('src', './images/white.png')
+               cards[cardsChosenIds[1]].setAttribute('src', './images/white.png')
+               cards[cardsChosenIds[0]].removeEventListener('click', flipCard)
+               cards[cardsChosenIds[1]].removeEventListener('click', flipCard)
+               console.log('You Won!!!!!')
+               
+               if(cardsWon.length == cardArray.length/2){
+                    gridDisplay.classList.add('restart-game')
+                    gridDisplay.innerHTML = 
+                                   `Congratulations 🥳🥳. You Just Won!! </br>
+                                   <button onclick='location.reload()'>Restart The Game</button>`
+               }
+          
+          }
+          else{
 
-          cards[cardsChosenIds[0]].setAttribute('src', './images/blank.png')
-          cards[cardsChosenIds[1]].setAttribute('src', './images/blank.png')
-          console.log(cardsChosen[0])
-          console.log('Not Yet Won')
+               cards[cardsChosenIds[0]].setAttribute('src', './images/blank.png')
+               cards[cardsChosenIds[1]].setAttribute('src', './images/blank.png')
+               console.log(cardsChosen[0])
+               console.log('Not Yet Won')
+          }
+          cardsChosen = []
+          cardsChosenIds = []
      }
-     cardsChosen = []
-     cardsChosenIds = []
 }
 
 
