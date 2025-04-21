@@ -72,6 +72,7 @@ function createBoard() {
 
      for(let i =0; i < shuffledArray.length; i++){
           const card = document.createElement('img');
+          card.style.cursor = 'pointer';
           card.setAttribute('src',  './images/blank.png')
           card.setAttribute('data-id', i)
           card.addEventListener('click', flipCard)
@@ -88,6 +89,7 @@ function checkMatch(){
      if(cardsChosen[0] === cardsChosen [1]){
           userScore++;
           document.getElementById('result').textContent = userScore;
+          cards[cardsChosenIds[0]].style.cursor = 'notallowed'
           cards[cardsChosenIds[0]].setAttribute('src', './images/white.png')
           cards[cardsChosenIds[1]].setAttribute('src', './images/white.png')
           cards[cardsChosenIds[0]].removeEventListener('click', flipCard)
