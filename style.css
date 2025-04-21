@@ -18,7 +18,7 @@ body, .game-box{
 }
 
 /* Button */
-#openRulesBtn, #startGame {
+#openRulesBtn, #startGame, #restartGame{
   padding: 10px 20px;
   background-color: #2e86de;
   color: #fff;
