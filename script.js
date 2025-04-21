@@ -87,6 +87,7 @@ function checkMatch(){
      console.log(cardsChosenIds)
      if(cardsChosen[0] === cardsChosen [1]){
           userScore++;
+          document.getElementById('result').textContent = userScore;
           cards[cardsChosenIds[0]].setAttribute('src', './images/white.png')
           cards[cardsChosenIds[1]].setAttribute('src', './images/white.png')
           cards[cardsChosenIds[0]].removeEventListener('click', flipCard)
