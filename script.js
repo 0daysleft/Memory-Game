@@ -2,6 +2,7 @@
 const gridDisplay = document.querySelector('#grid');
 let cardsChosen =[]
 let cardsChosenIds = []
+let userScore = 0;
 
 const cardArray =[
      {
@@ -85,6 +86,7 @@ function checkMatch(){
      //console.log(cards.getAttribute('data-id'))
      console.log(cardsChosenIds)
      if(cardsChosen[0] === cardsChosen [1]){
+          userScore++;
           cards[cardsChosenIds[0]].setAttribute('src', './images/white.png')
           cards[cardsChosenIds[1]].setAttribute('src', './images/white.png')
           cards[cardsChosenIds[0]].removeEventListener('click', flipCard)
