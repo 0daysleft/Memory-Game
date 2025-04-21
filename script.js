@@ -6,6 +6,13 @@ document.getElementById('openRulesBtn').onclick = function () {
   document.getElementById('rulesModal').style.display = 'block';
 };
 
+// Close modal
+document.querySelector('.close-btn').onclick = function () {
+  document.getElementById('rulesModal').style.display = 'none';
+};
+
+
+
 
 
 const gridDisplay = document.querySelector('#grid');
