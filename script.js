@@ -90,6 +90,7 @@ function checkMatch(){
           userScore++;
           document.getElementById('result').textContent = userScore;
           cards[cardsChosenIds[0]].style.cursor = 'not-allowed'
+          cards[cardsChosenIds[1]].style.cursor = 'not-allowed'
           cards[cardsChosenIds[0]].setAttribute('src', './images/white.png')
           cards[cardsChosenIds[1]].setAttribute('src', './images/white.png')
           cards[cardsChosenIds[0]].removeEventListener('click', flipCard)
