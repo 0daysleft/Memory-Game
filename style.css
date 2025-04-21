@@ -1,8 +1,26 @@
 
+body{
+     display: flex;
+     align-items: center;
+     height: 90vh;
+     justify-content: center;
+     flex-direction: column;
+}
 
 #grid{
      width: 400px;
      height: 300px;
      display: flex;
      flex-wrap: wrap;
+}
+
+.restart-game{
+     align-items: center;
+     justify-content: space-evenly;
+     flex-direction: column;
+}
+
+button{
+     cursor: pointer;
+     padding: 1rem;
 }

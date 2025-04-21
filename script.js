@@ -2,7 +2,6 @@
 const gridDisplay = document.querySelector('#grid');
 let cardsChosen =[]
 let cardsChosenIds = []
-let userScore = 0;
 let cardsWon = [];
 
 const cardArray =[
@@ -89,8 +88,7 @@ function checkMatch(){
      console.log(cardsChosenIds)
      if(cardsChosen[0] === cardsChosen [1]){
           cardsWon.push(cardsChosen);
-          userScore++;
-          document.getElementById('result').innerHTML = userScore + " " + cardsWon.length;
+          document.getElementById('result').innerHTML = cardsWon.length;
           cards[cardsChosenIds[0]].style.cursor = 'not-allowed'
           cards[cardsChosenIds[1]].style.cursor = 'not-allowed'
           cards[cardsChosenIds[0]].setAttribute('src', './images/white.png')
@@ -99,7 +97,8 @@ function checkMatch(){
           cards[cardsChosenIds[1]].removeEventListener('click', flipCard)
           console.log('You Won!!!!!')
           
-          if(userScore == 6){
+          if(cardsWon.length == cardArray.length/2){
+               gridDisplay.classList.add('restart-game')
                gridDisplay.innerHTML = 
                               `Congratulations 🥳🥳. You Just Won!! </br>
                               <button onclick='location.reload()'>Restart The Game</button>`
