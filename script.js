@@ -98,7 +98,7 @@ function checkMatch(){
           console.log('You Won!!!!!')
 
           if(userScore == 6){
-               alert("Done")
+               gridDisplay.textContent ='Congratulations 🥳🥳. You Just Won!!'
           }
          
      }
