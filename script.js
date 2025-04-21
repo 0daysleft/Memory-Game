@@ -104,7 +104,7 @@ function checkMatch(){
                cards[cardsChosenIds[1]].setAttribute('src', './images/white.png')
                cards[cardsChosenIds[0]].removeEventListener('click', flipCard)
                cards[cardsChosenIds[1]].removeEventListener('click', flipCard)
-               document.body.style.backgroundColor = 'green';
+               document.body
                
                if(cardsWon.length == cardArray.length/2){
                     gridDisplay.classList.add('restart-game')
@@ -119,7 +119,7 @@ function checkMatch(){
                cards[cardsChosenIds[0]].setAttribute('src', './images/blank.png')
                cards[cardsChosenIds[1]].setAttribute('src', './images/blank.png')
                console.log(cardsChosen[0])
-               document.body.style.backgroundColor = 'red';
+               document.body;
           }
      }
           cardsChosen = []
