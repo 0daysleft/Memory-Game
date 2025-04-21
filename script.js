@@ -95,6 +95,7 @@ function checkMatch(){
           console.log(cardsChosen[0])
           console.log('Not Yet Won')
           cardsChosen = []
+          cardsChosenIds = []
      }
 
 }
