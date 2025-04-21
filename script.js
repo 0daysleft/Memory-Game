@@ -1,6 +1,7 @@
 
 const gridDisplay = document.querySelector('#grid');
 let cardsChosen =[]
+let cardsChosenIds = []
 
 const cardArray =[
      {
@@ -81,8 +82,8 @@ function createBoard() {
 createBoard();
 
 function checkMatch(){
-     const cards = document.querySelector("#grid img");
-
+     const cards = document.querySelectorAll("#grid img");
+     console.log(cards)
      if(cardsChosen[0] === cardsChosen [1]){
           console.log('You Won!!!!!')
          
@@ -101,6 +102,7 @@ function checkMatch(){
 function flipCard(){
      const cardId = this.getAttribute('data-id')
      cardsChosen.push(shuffledArray[cardId].name)
+     cardsChosenIds.push(cardId);
      this.setAttribute('src', cardArray[cardId].img)
      console.log(cardsChosen)
           if(cardsChosen.length == 2){
