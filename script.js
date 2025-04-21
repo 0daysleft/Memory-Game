@@ -94,8 +94,8 @@ function checkMatch(){
      }
      else{
 
-          console.log(cards[cardsChosenIds[0]].setAttribute('src', './images/blank.png'))
-          console.log(cards[cardsChosenIds[1]].setAttribute('src', './images/blank.png'))
+          cards[cardsChosenIds[0]].setAttribute('src', './images/blank.png')
+          cards[cardsChosenIds[1]].setAttribute('src', './images/blank.png')
           console.log(cardsChosen[0])
           console.log('Not Yet Won')
      }
